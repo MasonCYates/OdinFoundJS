@@ -154,4 +154,35 @@
 //	default:
 //		console.log("Something went horribly wrong...");
 //}
-
+//This function shows how to create html elements and styling through the dom.
+//function actions(){
+    //this accesses the html and accesses anything with the class of contain.
+//    let container = document.querySelector('.contain');
+    //creates an element and stores it in the variable.
+//    let p = document.createElement('p');
+//    let h3 = document.createElement('h3');
+//    let div = document.createElement('div');
+//        let h1 = document.createElement('h1');
+//        let p2 = document.createElement('p');
+//        p2.textContent = 'ME TOO!'
+//        h1.textContent = 'I\'m in a div.';
+//    div.style.background.color = 'pink'
+//    div.style.border.color = 'black';
+//    h3.style.color = 'blue';
+//    h3.textContent = 'I\'m a blue h3!';
+//    p.style.color = 'red';
+//    p.textContent = 'Hey I\'m Red';
+//    
+//    div.appendChild(h1);
+//    div.appendChild(p2);
+//    container.appendChild(p);
+//    container.appendChild(h3);
+//    container.appendChild(div);
+//
+//}
+//adds an event listener for the click of a button. when clicked it will 
+//run any code in the brackets.
+//const btn = document.querySelector('#btn');
+//btn.addEventListener('click', () => {
+//  alert("Hello World"); // this is the code that will be ran.
+//});
