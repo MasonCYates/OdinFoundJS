@@ -9,57 +9,85 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Spriggan's Key's v1.0</h1>
-    <div class="keys">
-        <div class="key">
-            <kbd class="k">A</kbd>
-            <span class="sound">A Major</span>
+    <div class="bg">
+        <div class="h1">
+            <h1>Spriggan's Key's v1.0</h1>
+            <h2>Grand Piano Sound Profile</h2>
         </div>
-        <div class="key" id="s">
-            <kbd class="k">S</kbd>
-            <span class="sound">A Minor</span>
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd class="k">A</kbd>
+                <span class="sound">A Major</span>
+            </div>
+            <div data-key="83" class="key" id="s">
+                <kbd class="k">S</kbd>
+                <span class="sound">A Minor</span>
+            </div>
+            <div data-key="68"class="key">
+                <kbd class="k">D</kbd>
+                <span class="sound">C Major</span>
+            </div>
+            <div data-key="70" class="key" id="f">
+                <kbd class="k">F</kbd>
+                <span class="sound">C Minor</span>
+            </div>
+            <div data-key="71" class="key">
+                <kbd class="k">G</kbd>
+                <span class="sound">D Major</span>
+            </div>
+            <div data-key="74" class="key" id="j">
+                <kbd class="k">J</kbd>
+                <span class="sound">D Minor</span>
+            </div>
+            <div data-key="75" class="key" id="k">
+                <kbd class="k">K</kbd>
+                <span class="sound">E Major</span>
+            </div>
+            <div data-key="76" class="key">
+                <kbd class="k">L</kbd>
+                <span class="sound">E Minor</span>
+            </div>
+            <div data-key="186" class="key" id="fm">
+                <kbd class="k">;</kbd>
+                <span class="sound">F Major</span>
+            </div>
+            <div data-key="87" class="key">
+                <kbd class="k">W</kbd>
+                <span class="sound">F Minor</span>
+            </div>
+            <div data-key="69" class="key" id="e">
+                <kbd class="k">E</kbd>
+                <span class="sound">G Major</span>
+            </div>
+            <div data-key="82" class="key">
+                <kbd class="k">R</kbd>
+                <span class="sound">G Minor</span>
+            </div>
         </div>
-        <div class="key">
-            <kbd class="k">D</kbd>
-            <span class="sound">C Major</span>
-        </div>
-        <div class="key" id="f">
-            <kbd class="k">F</kbd>
-            <span class="sound">C Minor</span>
-        </div>
-        <div class="key">
-            <kbd class="k">G</kbd>
-            <span class="sound">D Major</span>
-        </div>
-        <div class="key" id="j">
-            <kbd class="k">J</kbd>
-            <span class="sound">D Minor</span>
-        </div>
-        <div class="key" id="k">
-            <kbd class="k">K</kbd>
-            <span class="sound">E Major</span>
-        </div>
-        <div class="key">
-            <kbd class="k">L</kbd>
-            <span class="sound">E Minor</span>
-        </div>
-        <div class="key" id="fm">
-            <kbd class="k">;</kbd>
-            <span class="sound">F Major</span>
-        </div>
-        <div class="key">
-            <kbd class="k">W</kbd>
-            <span class="sound">F Minor</span>
-        </div>
-        <div class="key" id="e">
-            <kbd class="k">E</kbd>
-            <span class="sound">G Major</span>
-        </div>
-        <div class="key">
-            <kbd class="k">R</kbd>
-            <span class="sound">G Minor</span>
+        <div class="p">
+            <p>Created by <a href="" class="sprig">Spriggan Tech Inc</a></p>
         </div>
     </div>
-    <p>Created by <a href="" class="sprig">Spriggan Tech</a></p>
+
+    <audio data-key="65" src="soundfiles/amaj.wav"></audio>
+    <audio data-key="83" src="soundfiles/amin.wav"></audio>
+    <audio data-key="68" src="soundfiles/cmaj.wav"></audio>
+    <audio data-key="70" src="soundfiles/cmin.wav"></audio>
+    <audio data-key="71" src="soundfiles/dmaj.wav"></audio>
+    <audio data-key="74" src="soundfiles/dmin.wav"></audio>
+    <audio data-key="75" src="soundfiles/emaj.wav"></audio>
+    <audio data-key="76" src="soundfiles/emin.wav"></audio>
+    <audio data-key="186" src="soundfiles/fmaj.wav"></audio>
+    <audio data-key="87" src="soundfiles/fmin.wav"></audio>
+    <audio data-key="69" src="soundfiles/gmaj.wav"></audio>
+    <audio data-key="82" src="soundfiles/gmin.wav"></audio>
+
+    <script>
+        window.addEventListener('keydown', function (e){
+    const audio = document.querySelector(`audio[data-key="${e.keycode}"]`);
+    if(!audio) return;//stop the function from running.
+    audio.play();
+});
+    </script>
 </body>
 </html>
