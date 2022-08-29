@@ -35,10 +35,11 @@ body {
     color: #F5B553;
     border-radius: 21px;  
 }
-.playing (
+.playing {
     transform:scale(1.1);
-    border-color:#ffc600;
-)
+    border-color : #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
 .k {
     margin-bottom: 45px;
     text-align: center;
